@@ -1,0 +1,58 @@
+:root {
+  --amarilloegg: #ffcb00;
+  --amarilloeggtrans: #ffcc006c;
+  --fondos: rgba(255, 255, 255, 0);
+}
+
+body {
+  background-image: url(/Imagenes/background.png);
+  background-size: auto;
+  background-color: var(--amarilloeggtrans);
+}
+#barra-de-nav .nav .nav-tabs{
+    width: 5%;
+    height: auto;
+}
+.btn .btn-primary .boton {
+  background-color: var(--amarilloegg);
+  border-color: var(--amarilloegg);
+}
+.nav-item .logo {
+  width: 3rem;
+  height: auto;
+}
+
+#barra-de-nav .nav-item{
+  float: left;
+}
+
+#barra-de-nav #offcanvasExample{
+  float: right;
+  list-style-type: none;
+  text-align: left;
+}
+
+.btn-link {
+  --bs-btn-color: black;
+  --bs-btn-hover-color: black;
+  --bs-btn-active-border-color: var(--amarilloegg);
+  text-decoration: none;
+}
+#noticiass{
+  width: 80rem;
+  height: 80rem;
+  margin: auto;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+#noticiass .card{
+  margin: auto;
+  margin-bottom: 2rem;
+  border: 3px solid rgba(0, 0, 0, 0.309);
+  width: 50rem;
+  height: 50rem;
+}
+
