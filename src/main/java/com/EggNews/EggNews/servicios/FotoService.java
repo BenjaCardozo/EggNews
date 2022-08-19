@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -17,6 +18,7 @@ public class FotoService {
     @Autowired
     private FotoRepositorio fotoRepositorio;
 
+    @Transactional
     public Foto guardar(MultipartFile archivo) throws IOException {
         if (archivo != null) {
             try {
@@ -32,7 +34,8 @@ public class FotoService {
         }
         return null;
     }
-
+    
+    @Transactional
     public Foto actualizar(String idFoto, MultipartFile archivo) throws MiException {
         if (archivo != null) {
             try {

@@ -13,7 +13,7 @@ body {
     width: 5%;
     height: auto;
 }
-.btn .btn-primary .boton {
+.btn .btn-outline-warning .boton {
   background-color: var(--amarilloegg);
   border-color: var(--amarilloegg);
 }
@@ -22,14 +22,25 @@ body {
   height: auto;
 }
 
-#barra-de-nav .nav-item{
-  float: left;
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-#barra-de-nav #offcanvasExample{
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+.navegador{
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+.agregarNoticia{
   float: right;
-  list-style-type: none;
-  text-align: left;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
 }
 
 .btn-link {
@@ -50,9 +61,17 @@ body {
 
 #noticiass .card{
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   border: 3px solid rgba(0, 0, 0, 0.309);
-  width: 50rem;
-  height: 50rem;
+  width: 45rem;
+  height: auto;
+}
+
+.card-img-top{
+  width: 44.7rem;
+  height: auto;
+  max-height: 40.7rem;
+  object-fit: contain;
+  border: solid var(--amarilloegg);
 }
 

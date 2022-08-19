@@ -47,6 +47,13 @@ public class NoticiasService {
 
         return noticias;
     }
+    
+    public Noticia buscarPorId(Long id){
+        
+        Noticia noticia = new Noticia();
+        noticia = noticiasRepositorio.buscarporId(id);
+        return noticia;
+    }
 
     @Transactional
     public void modificarNoticia(Long id, String titulo, String cuerpo, MultipartFile archivo) throws MiException, IOException {
