@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="registro.css" />
+    <title>Iniciar session</title>
+  </head>
+  <body>
+    <section>
+      <nav class="navbar bg-light shadow">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img
+              src="/Imagenes/logo.png"
+              alt=""
+              width="30rem"
+              height="auto"
+              class="d-inline-block align-text-top"
+            />
+            EggNews
+          </a>
+          <a
+          href="/registrar"
+          class="btn btn-outline-warning offcanvasHeader agregarNoticia"
+        >
+          Registrarse</a>
+        </div>
+      </nav>
+    </section>
+
+    <div th:if="${exito != null}" class="alert alert-success" role="alert">
+        <p th:text="${exito}"></p>
+    </div>
+    <div th:if="${error != null}" class="alert alert-danger" role="alert">
+      <p th:text="${error}"></p>
+    </div>
+
+    <div class="container" style="height: 25rem">
+      <div
+        class="row d-flex justify-content-center align-items-center h-100 shadow rounded"
+      >
+        <form th:action="@{/logincheck}" method="post">
+          <div class="mb-3">
+            <div style="margin-bottom: 2rem">Iniciar Session</div>
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              name="email"
+              placeholder="ejemplo@mail.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Contraseña</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              name="password"
+            />
+          </div>
+          <button type="submit" class="btn btn-warning">Ingresar</button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

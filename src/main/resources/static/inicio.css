@@ -1,14 +1,22 @@
 :root {
   --amarilloegg: #ffcb00;
   --amarilloeggtrans: #ffcc006c;
+  --amarillofondos: #fadc66;
   --fondos: rgba(255, 255, 255, 0);
 }
 
-body {
-  background-image: url(/Imagenes/background.png);
-  background-size: auto;
-  background-color: var(--amarilloeggtrans);
+html {
+  min-height: 100%;
+  position: relative;
 }
+/*body {
+  background-color: var(--amarilloeggtrans);
+  background-image: url(/Imagenes/background.png);
+  background-image: url(/Imagenes/background.png), linear-gradient(to bottom ,--amarilloeggtrans, #ffffffe1);
+  background-size: auto;
+  margin: 0;
+  margin-bottom: 40px;
+}*/
 #barra-de-nav .nav .nav-tabs{
     width: 5%;
     height: auto;
@@ -36,6 +44,10 @@ body {
 .navegador{
   background-color: rgb(255, 255, 255);
   margin-bottom: 1rem;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
 }
 .agregarNoticia{
   float: right;
@@ -50,28 +62,40 @@ body {
   text-decoration: none;
 }
 #noticiass{
-  width: 80rem;
-  height: 80rem;
+  width: auto;
+  height: 90%;
   margin: auto;
   display: -webkit-flex;
   -webkit-flex-direction: column;
-  display: flex;
+  display: absolut;
   flex-direction: column;
+  max-width: 98%;
 }
 
 #noticiass .card{
   margin: auto;
-  margin-bottom: 3rem;
+  margin-top: 7rem;
   border: 3px solid rgba(0, 0, 0, 0.309);
-  width: 45rem;
-  height: auto;
+  width: auto;
+  height: 90%;
+  max-width: 98%;
 }
 
 .card-img-top{
-  width: 44.7rem;
+  width: auto;
   height: auto;
-  max-height: 40.7rem;
   object-fit: contain;
   border: solid var(--amarilloegg);
 }
+
+.footer {
+  width: 100%;
+  height: 5rem;
+  text-align: center;
+  background: #ddd;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 

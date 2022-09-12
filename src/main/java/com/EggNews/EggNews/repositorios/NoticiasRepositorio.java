@@ -20,5 +20,5 @@ public interface NoticiasRepositorio extends JpaRepository<Noticia, Long> {
     public List<Noticia> buscarPorFecha (@Param("alta") Date alta);
     
     @Query("SELECT n FROM Noticia n WHERE n.id = :id")
-    public Noticia buscarporId(@Param("id") Long id);
+    public Noticia buscarporId(@Param("id") String id);
 }

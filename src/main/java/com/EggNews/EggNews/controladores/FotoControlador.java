@@ -25,7 +25,7 @@ public class FotoControlador {
     private NoticiasService noticiasService;
 
     @GetMapping("/noticias")
-    public ResponseEntity<byte[]> fotoNoticia(@RequestParam Long id) {
+    public ResponseEntity<byte[]> fotoNoticia(@RequestParam String id) {
         try {
             Noticia noticia = noticiasService.buscarPorId(id);
             if (noticia.getFoto() == null) {

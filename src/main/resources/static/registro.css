@@ -1,0 +1,68 @@
+:root {
+    --amarilloegg: #ffcb00;
+    --amarilloeggtrans: #ffcc006c;
+    --amarillofondos: #fadc66;
+    --fondos: rgba(255, 255, 255, 0);
+  }
+  
+  html {
+    min-height: 100%;
+    position: relative;
+  }
+  body {
+    background-color: var(--amarilloeggtrans);
+    background-image: url(/Imagenes/background.png);
+    background-image: url(/Imagenes/background.png), linear-gradient(to bottom ,--amarilloeggtrans, #ffffffe1);
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  #barra-de-nav .nav .nav-tabs{
+      width: 5%;
+      height: auto;
+  }
+  .btn .btn-outline-warning .boton {
+    background-color: var(--amarilloegg);
+    border-color: var(--amarilloegg);
+  }
+  .nav-item .logo {
+    width: 3rem;
+    height: auto;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  .navegador{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+  }
+ .container{
+    height: 43rem;
+    width: auto;
+    border-radius: 3%;
+    margin-top: 2%;
+    background-color: var(--amarillofondos);
+ }
+
+ #labelregistro{
+  width: auto;
+  height: auto;
+  margin: 0;
+  margin-bottom: 3rem;
+ }
+ .cerrarsess{
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+ }

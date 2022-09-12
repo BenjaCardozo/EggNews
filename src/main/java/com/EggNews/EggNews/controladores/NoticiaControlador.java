@@ -33,17 +33,17 @@ public class NoticiaControlador {
     private FotoService fotoService;
     
     
-    @GetMapping("/registrar")
+    @GetMapping("/agg")
     public String index(Model model) {
         ArrayList<Noticia> noticias = (ArrayList<Noticia>) noticiasService.listarNoticias();
         ArrayList<Foto> fotos = (ArrayList<Foto>) fotoService.listarFotos();
         log.info("hola");
         model.addAttribute("noticia", noticias);
         model.addAttribute("foto", fotos);
-        return "index.html";
+        return "inicio.html";
     }
 
-    @PostMapping("/registro")
+    @PostMapping("/aggnot")
     public String registro(@RequestParam String titulo, @RequestParam String cuerpo, @RequestParam MultipartFile archivo, ModelMap modelo) throws IOException {
 
         try {

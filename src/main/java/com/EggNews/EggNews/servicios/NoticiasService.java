@@ -48,7 +48,7 @@ public class NoticiasService {
         return noticias;
     }
     
-    public Noticia buscarPorId(Long id){
+    public Noticia buscarPorId(String id){
         
         Noticia noticia = new Noticia();
         noticia = noticiasRepositorio.buscarporId(id);
